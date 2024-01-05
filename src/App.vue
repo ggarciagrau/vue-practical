@@ -1,5 +1,11 @@
 <script setup>
-import HomePage from './components/HomePage.vue';
+import { defineAsyncComponent, Suspense } from 'vue';
+const HomePageAsync = defineAsyncComponent(() => new Promise((resolve) => {
+  setTimeout(() => {
+    resolve(import('./components/HomePage.vue'))
+  }, 1000);
+}))
+
 </script>
 
 <template>
