@@ -1,5 +1,7 @@
 <script setup>
 import { defineAsyncComponent, Suspense } from 'vue';
+import SplashPage from './components/SplashPage.vue';
+
 const HomePageAsync = defineAsyncComponent(() => new Promise((resolve) => {
   setTimeout(() => {
     resolve(import('./components/HomePage.vue'))
@@ -9,7 +11,14 @@ const HomePageAsync = defineAsyncComponent(() => new Promise((resolve) => {
 </script>
 
 <template>
-  <HomePage />
+  <Suspense>
+    <template #default>
+      <HomePageAsync />
+    </template>
+    <template #fallback>
+      <SplashPage />
+    </template>
+  </Suspense>
 </template>
 
 <style>
