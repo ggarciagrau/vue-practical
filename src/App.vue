@@ -22,7 +22,9 @@ const HomePageAsync = defineAsyncComponent(() => new Promise((resolve) => {
 </template>
 
 <style>
-html, body, #app {
+html,
+body,
+#app {
   min-height: 100vh;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
