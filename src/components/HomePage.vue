@@ -1,3 +1,14 @@
+<script setup>
+
+import UILayout from './UILayout.vue';
+import TopHeader from './TopHeader.vue';
+
+</script>
+
 <template>
-    <div>Hello world</div>
+    <UILayout>
+        <template #header>
+            <TopHeader />
+        </template>
+    </UILayout>
 </template>
