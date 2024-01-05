@@ -3,9 +3,9 @@
 </template>
 
 <style scoped>
-:slotted(header,
+.header,
 .resume,
-.movements) {
+.movements {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -13,16 +13,16 @@
     box-sizing: border-box;
 }
 
-:slotted(header) {
+.header {
     position: fixed;
     width: 100vw;
 }
 
-:slotted(.resume) {
+.resume {
     min-height: 100vh;
 }
 
-:slotted(.movements) {
+.movements {
     z-index: 1;
     position: absolute;
     flex-direction: column;
@@ -33,7 +33,7 @@
     border-radius: 24px;
 }
 
-:slotted(.movements .head) {
+.movements .head {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,14 +42,15 @@
     box-sizing: border-box;
 }
 
-:slotted(.movements .body) {
+.movements .body {
     height: 75vh;
     width: 100%;
 }
 
-:slotted(.movements .head .grip) {
+.movements .head .grip {
     width: 120px;
     height: 8px;
     background-color: #e5e5e5;
     border-radius: 4px;
-}</style>
+}
+</style>
