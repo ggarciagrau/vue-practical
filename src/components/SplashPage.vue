@@ -3,7 +3,7 @@
 <template>
     <div class="splashscreen">
         <img src="../assets/cashflow-icon.svg" alt="logo" />
-        <h1><span>Splash</span>page</h1>
+        <h1><span>Cash</span>flow</h1>
     </div>
 </template>
 
