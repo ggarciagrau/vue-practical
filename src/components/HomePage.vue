@@ -17,7 +17,14 @@ import Movements from './Movements.vue'
                 label="Total savings"
                 :total-amount="1000000"
                 :amount="10000"
-            />
+            >
+            <template #chart>
+                Chart
+            </template>
+            <template #action>
+                Action
+            </template>
+        </Resume>
         </template>
         <template #movements>
             <Movements />

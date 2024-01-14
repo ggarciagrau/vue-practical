@@ -11,17 +11,29 @@ const props = defineProps({
     }
 })
 
+const currencyFormatter = new Intl.NumberFormat('es-ES', {
+    style: 'currency',
+    currency: 'eur'
+})
+
 const displayedAmount = computed(() =>
     props.amount ? props.amount : props.totalAmount
 )
 
+const amountCurrency = computed(() => `${currencyFormatter.format(displayedAmount.value)}`)
 
 </script>
 
 <template>
     <main>
         <p>{{ label }}</p>
-        <h1>{{ displayedAmount }}</h1>
+        <h1>{{ amountCurrency }}</h1>
+        <div class="chart">
+            <slot name="chart" />
+        </div>
+        <div class="action">
+            <slot name="action"></slot>
+        </div>
     </main>
 </template>
 
@@ -45,7 +57,7 @@ h1 {
     color: var(--brand-green);
 }
 
-.graphic {
+.chart {
     display: flex;
     justify-content: center;
     align-items: center;
