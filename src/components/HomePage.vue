@@ -13,7 +13,11 @@ import Movements from './Movements.vue'
             <TopHeader />
         </template>
         <template #resume>
-            <Resume />
+            <Resume 
+                label="Total savings"
+                :total-amount="1000000"
+                :amount="10000"
+            />
         </template>
         <template #movements>
             <Movements />
